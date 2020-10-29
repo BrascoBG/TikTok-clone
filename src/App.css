@@ -1,11 +1,26 @@
 html {
   scroll-snap-type: y mandatory;
 }
+.app {
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
 .app__videos {
   position: relative;
-  height: 800px;
+  height: 100vh;
   overflow: scroll;
   width: 80%;
   max-width: 500px;
   scroll-snap-type: y mandatory;
+  border-radius: 20px;
+}
+/* Hide scroll bar for Chrome, Safari, Opera */
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scroll bar for IE, Edge, Firefox */
+.app__videos {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
 }
