@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import video1 from "../../assets/videos/video1.mp4";
 import VideoFooter from "../VideoFooter/VideoFooter";
+import VideoSidebar from "../VideoSidebar/VideoSidebar";
 import "./Video.css";
 
-function Video() {
+function Video({ url, channel, description, song, likes, messages, shares }) {
   const [play, setPlay] = useState(false);
   const videoRef = useRef(null);
 
@@ -24,13 +24,10 @@ function Video() {
         className="video__player"
         ref={videoRef}
         onClick={onVideoPress}
-        src={video1}
+        src={url}
       ></video>
-      <VideoFooter
-        channel="ivokrustev"
-        description="Check out this island"
-        song="Can't touch this - MC Hummer"
-      />
+      <VideoFooter channel={channel} description={description} song={song} />
+      <VideoSidebar likes={likes} messages={messages} shares={shares} />
     </div>
   );
 }

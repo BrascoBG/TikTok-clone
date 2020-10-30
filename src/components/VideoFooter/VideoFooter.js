@@ -1,6 +1,5 @@
 import React from "react";
 import "./VideoFooter.css";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import Ticker from "react-ticker";
 
